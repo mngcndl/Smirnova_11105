@@ -9,7 +9,7 @@ for i in range(len(a)):
         var1 = str(vars.pop())
         if ans == '':
             var2 = str(vars.pop())
-            ans = var1 + ' ' + a[i] + ' ' + var2
+            ans = var2 + ' ' + a[i] + ' ' + var1
         else:
             if a[i] == '+' or a[i] == '-':
                 ans = var1 + ' ' + a[i] + ' ' + '(' + ans + ')'
