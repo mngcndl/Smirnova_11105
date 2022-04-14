@@ -1,0 +1,3 @@
+\bq\w*e[ee]*\b
+\be.j\w*\\.\b
+\b.*(?:[euioa][qwrtypsdfghjklzxcvbnm][euioa][qwrtypsdfghjklzxcvbnm])+|(?:[qwrtypsdfghjklzxcvbnm][euioa][qwrtypsdfghjklzxcvbnm][euioa])+.*\b
