@@ -1,8 +1,8 @@
-file = open(r"Tasks014-020.txt", encoding="utf-8", mode='r')
-line = file.readline()
-
 from task016 import correct_time
 from task017 import abbreviation
+
+file = open(r"Tasks014-020.txt", encoding="utf-8", mode='r')
+line = file.readline()
 
 i = 1
 while line:

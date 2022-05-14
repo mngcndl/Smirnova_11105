@@ -10,14 +10,3 @@ def correct_time(st):
     if ans == '':
         ans = None
     return ans
-
-
-file = open(r"Tasks014-020.txt", encoding="utf-8", mode='r')
-line = file.readline()
-
-while line:
-    string_res = correct_time(line)
-    if string_res:
-        print(string_res)
-    line = file.readline()
-    

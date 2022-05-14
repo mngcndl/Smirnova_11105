@@ -1,6 +1,6 @@
 import re
 
-pattern = r"\ba+[^b]\b"
-st = 'aaab aaaac aaad ae ad b aedaab '
-print(st)
-print(re.findall(pattern, st))  # ['aaaac', 'aaad', 'ae', 'ad']
+
+def a_in_n_degree_plus_any_letter_except_b(st):
+    pattern = r"\ba+[^b]\b"
+    return re.findall(pattern, st)
