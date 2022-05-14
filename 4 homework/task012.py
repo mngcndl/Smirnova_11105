@@ -67,7 +67,7 @@ listed_opers = ['+', '*', '-', '/']
 listed_args = [1, 1, 2, 3, 10]
 
 
-def calculate_for_partial(args, opers) -> float:
+def calculate_for_partial(args: list, opers: list) -> float:
     for i in range(4):
         if opers[i] == '+':
             res = args[0] + args[1]
