@@ -1,0 +1,27 @@
+alphabet = 'абвгдеёжзийклмнопрстуфхцчшщъыьэюя'
+uniq = set()
+words_on_this_letter = {}
+
+for i in range(33):
+    words_on_this_letter[alphabet[i]] = 0
+
+with open("text.txt", 'r', encoding='utf-8') as file:
+    line = file.readline()
+    while line:
+        line_to_words = list(map(str, line.split()))
+        for i in range(len(line_to_words)):
+            cur_word = line_to_words[i].lower()
+            
+            uniq.add(cur_word)
+            if cur_word[0] in words_on_this_letter:
+                words_on_this_letter[cur_word[0]] += 1
+        line = file.readline()
+
+file.close()
+
+with open("text.txt", 'w', encoding='utf-8') as file:
+    file.write(str(len(uniq)) + "\n")
+    for i in range(33):
+        if words_on_this_letter[alphabet[i]]:
+            file.write(alphabet[i] + ": " + str(words_on_this_letter[alphabet[i]]) + "\n")
+file.close()
